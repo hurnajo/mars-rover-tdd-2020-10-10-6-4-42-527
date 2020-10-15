@@ -46,6 +46,8 @@ public class MarsRover {
     private void roverMovement() {
         if(heading.equals("N")){
             locationY +=1;
+        }if(heading.equals("S")){
+            locationY -=1;
         }
     }
 
