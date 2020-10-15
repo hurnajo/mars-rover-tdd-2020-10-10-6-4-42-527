@@ -25,7 +25,7 @@ class DemoTest {
         marsRover.executeCommands("L");
         //then
         assertEquals(0,marsRover.getLocationX());
-        assertEquals(1,marsRover.getLocationY());
+        assertEquals(0,marsRover.getLocationY());
         assertEquals("W",marsRover.getHeading());
     }
 }

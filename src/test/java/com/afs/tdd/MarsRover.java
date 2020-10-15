@@ -22,7 +22,16 @@ public class MarsRover {
     private void executeCommand(String command){
         if(command.equals("M")){
             roverMovement();
-        };
+        }
+        if(command.equals("L")){
+            roverTurnLeft();
+        }
+    }
+
+    private void roverTurnLeft() {
+        if(heading.equals("N")){
+            heading = "W";
+        }
     }
 
     private void roverMovement() {
@@ -32,7 +41,7 @@ public class MarsRover {
     }
 
     public int getLocationX() {
-        return 0;
+        return locationX;
     }
 
     public int getLocationY() {
