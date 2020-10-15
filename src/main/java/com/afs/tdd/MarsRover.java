@@ -43,6 +43,9 @@ public class MarsRover {
         else if (heading.equals(EAST)) {
             heading = SOUTH;
         }
+        else if (heading.equals(WEST)) {
+            heading = NORTH;
+        }
     }
 
     private void roverTurnLeft() {
