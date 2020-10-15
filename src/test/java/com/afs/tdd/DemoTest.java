@@ -18,7 +18,7 @@ class DemoTest {
     }
 
     @Test
-    void should_return_x_0_y_0_heading_N_when_execute_given_x_0_y_0_heading_W_and_command_L() {
+    void should_return_x_0_y_0_heading_W_when_execute_given_x_0_y_0_heading_N_and_command_L() {
         //given
         MarsRover marsRover = new MarsRover(0,0,"N");
         //when
@@ -30,7 +30,7 @@ class DemoTest {
     }
 
     @Test
-    void should_return_x_0_y_0_heading_N_when_execute_given_x_0_y_0_heading_E_and_command_R() {
+    void should_return_x_0_y_0_heading_E_when_execute_given_x_0_y_0_heading_N_and_command_R() {
         //given
         MarsRover marsRover = new MarsRover(0,0,"N");
         //when
@@ -40,5 +40,4 @@ class DemoTest {
         assertEquals(0,marsRover.getLocationY());
         assertEquals("E",marsRover.getHeading());
     }
-
 }
