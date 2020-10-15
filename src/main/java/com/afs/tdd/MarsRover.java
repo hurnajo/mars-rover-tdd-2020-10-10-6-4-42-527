@@ -2,6 +2,8 @@ package com.afs.tdd;
 
 import java.util.Arrays;
 
+import static Constant.constant.*;
+
 public class MarsRover {
     private int locationX;
     private int locationY;
@@ -16,38 +18,42 @@ public class MarsRover {
 
     public void executeCommands(String commands) {
         Arrays.asList(commands.split(""))
-                .forEach(command->this.executeCommand(command));
+                .forEach(command -> this.executeCommand(command));
     }
 
-    private void executeCommand(String command){
-        if(command.equals("M")){
+    private void executeCommand(String command) {
+        if (command.equals("M")) {
             roverMovement();
         }
-        if(command.equals("L")){
+        if (command.equals("L")) {
             roverTurnLeft();
         }
-        if (command.equals("R")){
+        if (command.equals("R")) {
             roverTurnRight();
         }
     }
 
     private void roverTurnRight() {
-        if(heading.equals("N")){
-            heading = "E";
+        if (heading.equals(NORTH)) {
+            heading = EAST;
         }
     }
 
     private void roverTurnLeft() {
-        if(heading.equals("N")){
-            heading = "W";
+        if (heading.equals(NORTH)) {
+            heading = WEST;
+        }
+        if (heading.equals(SOUTH)) {
+            heading = EAST;
         }
     }
 
     private void roverMovement() {
-        if(heading.equals("N")){
-            locationY +=1;
-        }if(heading.equals("S")){
-            locationY -=1;
+        if (heading.equals(NORTH)) {
+            locationY += 1;
+        }
+        if (heading.equals(SOUTH)) {
+            locationY -= 1;
         }
     }
 
