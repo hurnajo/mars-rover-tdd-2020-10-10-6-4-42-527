@@ -37,8 +37,11 @@ public class MarsRover {
         if (heading.equals(NORTH)) {
             heading = EAST;
         }
-        if (heading.equals(SOUTH)) {
+        else if (heading.equals(SOUTH)) {
             heading = WEST;
+        }
+        else if (heading.equals(EAST)) {
+            heading = SOUTH;
         }
     }
 
@@ -46,10 +49,10 @@ public class MarsRover {
         if (heading.equals(NORTH)) {
             heading = WEST;
         }
-        if (heading.equals(SOUTH)) {
+        else if (heading.equals(SOUTH)) {
             heading = EAST;
         }
-        if (heading.equals(EAST)) {
+        else if (heading.equals(EAST)) {
             heading = NORTH;
         }
     }
@@ -64,8 +67,6 @@ public class MarsRover {
         if (heading.equals(EAST)) {
             locationX += 1;
         }
-
-
     }
 
     public int getLocationX() {
