@@ -161,4 +161,16 @@ class DemoTest {
         });
     }
 
+    @Test
+    void should_return_x_negative_1_y_1_heading_N_when_execute_given_x_0_y_0_heading_N_and_command_MLMR() {
+        //given
+        MarsRover marsRover = new MarsRover(0, 0, "N");
+        //when
+        marsRover.executeCommands("MLMR");
+        //then
+        assertEquals(-1, marsRover.getLocationX());
+        assertEquals(1, marsRover.getLocationY());
+        assertEquals("N", marsRover.getHeading());
+    }
+
 }
