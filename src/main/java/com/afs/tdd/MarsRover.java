@@ -61,13 +61,13 @@ public class MarsRover {
         if (heading.equals(NORTH)) {
             locationY += 1;
         }
-        if (heading.equals(SOUTH)) {
+        else if (heading.equals(SOUTH)) {
             locationY -= 1;
         }
-        if (heading.equals(EAST)) {
+        else if (heading.equals(EAST)) {
             locationX += 1;
         }
-        if (heading.equals(WEST)) {
+        else if (heading.equals(WEST)) {
             locationX -= 1;
         }
     }
