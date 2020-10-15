@@ -58,6 +58,11 @@ public class MarsRover {
         if (heading.equals(SOUTH)) {
             locationY -= 1;
         }
+        if (heading.equals(EAST)) {
+            locationX += 1;
+        }
+
+
     }
 
     public int getLocationX() {
