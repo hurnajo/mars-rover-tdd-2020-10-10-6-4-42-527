@@ -10,7 +10,6 @@ public class MarsRover {
     private String heading;
 
     public MarsRover(int locationX, int locationY, String heading) {
-
         this.locationX = locationX;
         this.locationY = locationY;
         this.heading = heading;
@@ -27,16 +26,17 @@ public class MarsRover {
     }
 
     public void executeCommand(String command) throws CommandNotDefinedException {
-        if (command.equals("M")) {
+        if (command.equals(MOVE_FORWARD)) {
             roverMovement();
-        } else if (command.equals("L")) {
+        } else if (command.equals(TURN_LEFT)) {
             roverTurnLeft();
-        } else if (command.equals("R")) {
+        } else if (command.equals(TURN_RIGHT)) {
             roverTurnRight();
         } else {
-            throw new CommandNotDefinedException("Invalid Movement");
+            throw new CommandNotDefinedException(INVALID_MOVEMENT);
         }
     }
+
 
     private void roverTurnRight() {
         if (heading.equals(NORTH)) {
