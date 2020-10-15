@@ -42,7 +42,7 @@ class DemoTest {
     }
 
     @Test
-    void should_return_x_0_y_0_heading_S_when_execute_given_x_0_y_0_heading_E_and_command_R() {
+    void should_return_x_0_y_negative_1_heading_S_when_execute_given_x_0_y_0_heading_S_and_command_M() {
         //given
         MarsRover marsRover = new MarsRover(0,0,"S");
         //when
