@@ -37,7 +37,6 @@ public class MarsRover {
         }
     }
 
-
     private void roverTurnRight() {
         if (heading.equals(NORTH)) {
             heading = EAST;
@@ -63,15 +62,38 @@ public class MarsRover {
     }
 
     private void roverMovement() {
-        if (heading.equals(NORTH)) {
-            locationY += 1;
-        } else if (heading.equals(SOUTH)) {
-            locationY -= 1;
-        } else if (heading.equals(EAST)) {
-            locationX += 1;
-        } else if (heading.equals(WEST)) {
-            locationX -= 1;
+        if (isCoordinateX()) {
+            newlocationX(heading);
         }
+        if (isCoordinateY()) {
+            newlocationY(heading);
+        }
+    }
+
+    private void newlocationX(String heading) {
+        if (heading.equals(EAST)) {
+            locationX++;
+        }
+        if (heading.equals(WEST)) {
+            locationX--;
+        }
+    }
+
+    private void newlocationY(String heading) {
+        if (heading.equals(NORTH)) {
+            locationY++;
+        }
+        if (heading.equals(SOUTH)) {
+            locationY--;
+        }
+    }
+
+    private boolean isCoordinateX() {
+        return heading.equals(EAST) || heading.equals(WEST);
+    }
+
+    private boolean isCoordinateY() {
+        return heading.equals(NORTH) || heading.equals(SOUTH);
     }
 
     public int getLocationX() {
